@@ -15,28 +15,51 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const swagger_1 = require("@nestjs/swagger");
 const DocumentDto_1 = require("../../domain/dto/DocumentDto");
+const document_service_1 = require("./document.service");
 let DocumentController = class DocumentController {
-    async getList(user) {
-        return "ok";
+    constructor(documentService) {
+        this.documentService = documentService;
+    }
+    async create(document) {
+        return this.documentService.create(document);
+    }
+    async find(document) {
+        return this.documentService.find(document);
     }
 };
 __decorate([
-    common_1.Post('list'),
+    common_1.Post('add'),
     swagger_1.ApiOperation({
-        title: 'Get user list',
-        operationId: 'userList',
+        title: 'Add document',
+        operationId: 'addDocument',
     }),
     swagger_1.ApiOkResponse({
-        description: 'Successfully return list user',
+        description: 'Successfully add document',
     }),
-    swagger_1.ApiNotFoundResponse({ description: 'USER' }),
+    swagger_1.ApiNotFoundResponse({ description: 'DOCUMENT' }),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [DocumentDto_1.DocumentDto]),
     __metadata("design:returntype", Promise)
-], DocumentController.prototype, "getList", null);
+], DocumentController.prototype, "create", null);
+__decorate([
+    common_1.Post('find'),
+    swagger_1.ApiOperation({
+        title: 'Find document',
+        operationId: 'findDocument',
+    }),
+    swagger_1.ApiOkResponse({
+        description: 'Successfully find document',
+    }),
+    swagger_1.ApiNotFoundResponse({ description: 'DOCUMENT' }),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [DocumentDto_1.DocumentDto]),
+    __metadata("design:returntype", Promise)
+], DocumentController.prototype, "find", null);
 DocumentController = __decorate([
-    common_1.Controller('document')
+    common_1.Controller('document'),
+    __metadata("design:paramtypes", [document_service_1.DocumentService])
 ], DocumentController);
 exports.DocumentController = DocumentController;
 //# sourceMappingURL=document.controller.js.map

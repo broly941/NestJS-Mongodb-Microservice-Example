@@ -19,5 +19,11 @@ __decorate([
     swagger_1.ApiModelProperty({ type: String, required: true }),
     __metadata("design:type", String)
 ], DocumentDto.prototype, "id", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    class_validator_1.IsNotEmpty(),
+    swagger_1.ApiModelProperty({ type: String, required: true }),
+    __metadata("design:type", String)
+], DocumentDto.prototype, "name", void 0);
 exports.DocumentDto = DocumentDto;
 //# sourceMappingURL=DocumentDto.js.map

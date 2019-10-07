@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { DocumentController } from './document.controller';
 
-describe('Document Controller', () => {
+describe('DocumentSchema Controller', () => {
   let controller: DocumentController;
 
   beforeEach(async () => {

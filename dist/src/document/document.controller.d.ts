@@ -1,4 +1,8 @@
 import { DocumentDto } from "../../domain/dto/DocumentDto";
+import { DocumentService } from "./document.service";
 export declare class DocumentController {
-    getList(user: DocumentDto): Promise<{}>;
+    private readonly documentService;
+    constructor(documentService: DocumentService);
+    create(document: DocumentDto): Promise<{}>;
+    find(document: DocumentDto): Promise<{}>;
 }

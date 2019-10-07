@@ -7,4 +7,9 @@ export class DocumentDto {
     @IsNotEmpty()
     @ApiModelProperty({ type: String, required: true })
     readonly id: string;
+
+    @IsString()
+    @IsNotEmpty()
+    @ApiModelProperty({ type: String, required: true })
+    readonly name: string;
 }

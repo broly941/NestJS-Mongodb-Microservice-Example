@@ -9,10 +9,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const document_controller_1 = require("./document.controller");
 const document_service_1 = require("./document.service");
+const mongoose_1 = require("@nestjs/mongoose");
+const DocumentSchema_1 = require("../../domain/schema/DocumentSchema");
 let DocumentModule = class DocumentModule {
 };
 DocumentModule = __decorate([
     common_1.Module({
+        imports: [mongoose_1.MongooseModule.forFeature([{ name: 'document', schema: DocumentSchema_1.DocumentSchema }])],
         controllers: [document_controller_1.DocumentController],
         providers: [document_service_1.DocumentService]
     })
