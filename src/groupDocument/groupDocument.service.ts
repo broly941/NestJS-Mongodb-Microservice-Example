@@ -5,15 +5,15 @@ import { Model } from 'mongoose';
 
 
 @Injectable()
-export class DocumentService {
-    constructor(@InjectModel('document') private readonly documentModel: Model<DocumentDto>) {}
+export class GroupDocumentService {
+    constructor(@InjectModel('groupDocument') private readonly groupDocumentModel: Model<DocumentDto>) {}
 
     async create(document: DocumentDto){
-        const createdCat = new this.documentModel(document);
+        const createdCat = new this.groupDocumentModel(document);
         return createdCat.save();
     }
 
     async find(document: DocumentDto){
-        return this.documentModel.find(document);
+        return this.groupDocumentModel.find(document);
     }
 }
