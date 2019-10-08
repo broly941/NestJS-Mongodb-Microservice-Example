@@ -1,15 +1,36 @@
 import { ApiModelProperty } from '@nestjs/swagger';
-import { IsNotEmpty, IsString } from 'class-validator';
+import {IsNotEmpty, IsOptional, IsString} from 'class-validator';
 
 export class DocumentDto {
 
     @IsString()
-    @IsNotEmpty()
+    @IsOptional()
     @ApiModelProperty({ type: String, required: true })
     readonly id: string;
 
     @IsString()
-    @IsNotEmpty()
+    @IsOptional()
     @ApiModelProperty({ type: String, required: true })
     readonly name: string;
+
+    @IsString()
+    @IsOptional()
+    @ApiModelProperty({ type: String, required: true })
+    readonly url: string;
+
+    @IsString()
+    @IsOptional()
+    @ApiModelProperty({ type: String, required: true })
+    readonly headline: string;
+
+    @IsString()
+    @IsOptional()
+    @ApiModelProperty({ type: String, required: true })
+    readonly content: string;
+
+    @IsString()
+    @IsOptional()
+    @ApiModelProperty({ type: String, required: true })
+    readonly type: string;
+
 }

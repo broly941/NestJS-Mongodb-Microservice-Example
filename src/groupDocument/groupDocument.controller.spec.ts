@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { GroupDocumentController } from './groupDocumentController';
 
-describe('DocumentSchema Controller', () => {
+describe('GroupDocumentSchema Controller', () => {
   let controller: GroupDocumentController;
 
   beforeEach(async () => {
