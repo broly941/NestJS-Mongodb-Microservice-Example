@@ -1,4 +1,6 @@
 export enum Config {
     mongoUrl='localhost',
-    mongoDbName='navigatorDb'
+    mongoDbName='navigatorDb',
+
+    servicePort=3000
 }
