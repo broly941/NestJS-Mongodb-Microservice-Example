@@ -1,0 +1,8 @@
+#DockerHub
+docker build -t deviaphan/nest4j-mongodb-microservice-dev .
+docker push deviaphan/nest4j-mongodb-microservice-dev
+docker run --rm -it -p 3000:3000 deviaphan/nest4j-mongodb-microservice-dev
+
+# Local
+docker build -t local-nest4j-mongodb-microservice-dev .
+docker run --rm -it -p 3000:3000 local-nest4j-mongodb-microservice-dev
