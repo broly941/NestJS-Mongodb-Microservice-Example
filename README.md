@@ -1,3 +1,8 @@
-to initialize a database:
- 1) create a database named "navigatorDb"
- 2) npm run initDb
+# NestJS-Neo4J-Microservice-Example
+TODO: 
+
+1. run docker
+2. open console and use follow [commands](https://github.com/broly941/NestJS-Mongodb-Microservice-Example/blob/master/docker-comands.txt)
+3. to initialize a database:
+   - create a database named "navigatorDb"
+   - npm run initDb
