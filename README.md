@@ -1,4 +1,4 @@
-# NestJS-Neo4J-Microservice-Example
+# NestJS-Mongodb-Microservice-Example
 TODO: 
 
 1. run docker
